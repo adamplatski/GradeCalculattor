@@ -1,0 +1,72 @@
+#!/bin/bash
+#Adam Plater
+#040922567
+#CST8102-301
+#this script calculates the final grade and displays the letter grade
+
+echo -n "Enter Assignment mark(0-40):";read mark1
+echo -n "Enter Test 1 mark (0-15):";read mark2
+echo -n "Enter Test 2 mark (0-15):";read mark3
+echo -n "Enter Final exam mark (0-30):";read mark4
+
+FinalMark=$((mark1+mark2+mark3+mark4));
+
+echo -n "Your final numeric grade is $FinalMark,"
+
+if [ $FinalMark -ge 90 ] && [ $FinalMark -le 100 ]
+then
+        echo " and your final letter grade is A+ "
+
+elif [ $FinalMark -ge 85 ] && [ $FinalMark -lt 90 ]
+then
+        echo " and your final letter grade is A "
+
+elif [ $FinalMark -ge 80 ] && [ $FinalMark -lt 85 ]
+then
+        echo " and your final letter grade is A- "
+
+elif [ $FinalMark -ge 77 ] && [ $FinalMark -lt 80 ]
+then
+        echo " and your final letter grade is B+ "
+
+elif [ $FinalMark -ge 73 ] && [ $FinalMark -lt 77 ]
+then
+        echo " and your final letter grade is B"
+
+elif [ $FinalMark -ge 70 ] && [ $FinalMark -lt 73 ]
+then
+        echo " and your final letter grade is B- "
+
+elif [ $FinalMark -ge 67 ] && [ $FinalMark -lt  70 ]
+then
+        echo " and your final letter grade is C+"
+
+elif [ $FinalMark -ge 63 ] && [ $FinalMark -lt 67 ]
+then
+        echo " and your final letter grade is C "
+
+elif [ $FinalMark -ge 60 ] && [ $FinalMark -lt 63 ]
+then
+        echo " and your final letter grade is C- "
+
+elif [ $FinalMark -ge 57 ] && [ $FinalMark -lt 60 ]
+then
+        echo " and your final letter grade is D+ "
+
+elif [ $FinalMark -ge 53 ] && [ $FinalMark -lt 57 ]
+then
+        echo " and your final letter grade is D "
+
+elif [ $FinalMark -ge 50 ] && [ $FinalMark -lt 53 ]
+then
+        echo " and your final letter grade is D- "
+
+else [ $FinalMark -ge 0 ] && [ $FinalMmark -lt 49 ];
+
+echo " and your final letter grade is F "
+
+fi
+
+
+
+
